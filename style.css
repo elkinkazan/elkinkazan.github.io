@@ -1,0 +1,280 @@
+/*Убираем настройки браузера, устанавливаем общие правила для страницы*/
+@font-face {
+  font-family: Gotham Pro; /* Имя шрифта */
+  src: url(fonts/gotham.ttf); /* Путь к файлу со шрифтом */
+}
+
+body {
+  font-family: Gotham Pro, Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: 62.8%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.container {
+  display: block;
+  font-size: 1.3rem;
+  padding-top: 0.9rem;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.mrg {
+  margin-top: 15px;
+}
+
+.nmr {
+  color: #909090;
+}
+
+.number {
+  font-size: 3.2rem;
+}
+
+.flag {
+  padding-bottom: 3rem;
+  z-index: 100;
+  background-color: white;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.content {
+  position: relative;
+}
+
+/*Вертикальная линия слева*/
+.table1 {
+  position: absolute;
+  top: 200px;
+  left: -70px;
+  width: 50px;
+  height: 270px;
+  border-top-left-radius: 10px;
+  border-top: 1px solid #909090;
+  border-left: 1px solid #909090;
+}
+
+/*Вторая Вертикальная линия слева*/
+.table1::after {
+  content: '';
+  position: absolute;
+  top: 270px;
+  left: -1px;
+  width: 25px;
+  height: 30px;
+  border-top: 1px solid #909090;
+  border-left: 1px solid #909090;
+}
+
+.table1::before {
+  content: '+';
+  padding: 5px;
+  font-size: 2rem;
+  color: #909090;
+  position: absolute;
+  top: 300px;
+  left: -13px;
+}
+
+.content::after {
+  content: '';
+  position: absolute;
+  top: 540px;
+  left: -70px;
+  width: 15px;
+  height: 20px;
+  border-bottom-left-radius: 10px;
+  border-left: 1px solid #909090;
+  border-bottom: 1px solid #909090;
+  z-index: -1;
+}
+
+/*Круг*/
+.content::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  border-top: 15px solid #ffd700;
+  border-right: 15px solid #ffd700;
+  border-bottom: 13px solid #339900;
+  border-left: 11px solid #f0f0f0;
+  border-radius: 50%;
+  transform: rotate(25deg);
+  height: 320px;
+  width: 320px;
+  z-index: -1;
+}
+
+.loyal {
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+}
+
+.low {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.common {
+  color: #b8b8b8;
+}
+
+.bottom {
+  font-size: 2rem;
+  color: #339900;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.rec {
+  height: 0;
+  width: 0;
+  border-left: 0.9rem solid transparent;
+  border-right: 0.9rem solid transparent;
+  border-bottom: 0.9rem solid #339900;
+  margin-right: 0.5rem;
+}
+
+.adv {
+  display: flex;
+  flex-direction: row;
+}
+
+.examples {
+  justify-content: space-between;
+  align-content: center;
+}
+
+.wrapper {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-auto-rows: minmax(50px, auto);
+  grid-column-gap: 0.3rem;
+  grid-row-gap: 20px;
+  text-align: left;
+}
+
+.bars {
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  position: relative;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #e0e0e0;
+}
+
+.bar1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 40px;
+  border-top-left-radius: 10px;
+  background-color: #339900;
+  border: 1px solid #339900;
+}
+
+.bar2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 40px;
+  border-top-left-radius: 10px;
+  background-color: #ffd700;
+  border: 1px solid #ffd700;
+}
+
+.bar3::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-top-left-radius: 10px;
+  background-color: #ff4d4d;
+  border: 1px solid #ff4d4d;
+}
+
+.bar1::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 49px;
+  height: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #339900;
+  opacity: 0.4;
+}
+
+.bar2::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 60px;
+  height: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #ffd700;
+  opacity: 0.4;
+}
+
+.bar3::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 50px;
+  height: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #ff4d4d;
+  opacity: 0.4;
+}
+
+.right {
+  text-align: right;
+}
